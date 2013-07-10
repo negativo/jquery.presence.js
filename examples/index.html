@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+    <meta charset="UTF-8" />
+    <title>Presence.js - davideberardi </title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+  
+</head>
+<body>
+    <embed wmode="transparent" class="videogames-flash mutetabId_3711540" src="http://games.mochiads.com/c/g/coaster-racer-3/CoasterRacer3_Kong_Mochi.swf" menu="false" quality="high" width="640" height="480" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" allowscriptaccess="always">
+      <div class="prensenceStats" style="position:absolute;left:0px;bottom:0px;padding:10px;">
+          <span class="pause"></span>
+          <span class="session"></span>
+          <span class="lastSession"></span>
+          <span class="totalSession"></span>
+          <span class="userPlaying"></span>
+      </div>
+  <script src="../presence/jquery.presence.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+  var presence2 = $('body').find('embed').presence();
+  
+        setTimeout(function(){
+           
+           console.log('calling session property '+presence2.data('presence').getLog());        
+        },15000);
+  
+
+  
+
+
+
+  </script>
+</body>
+</html>
