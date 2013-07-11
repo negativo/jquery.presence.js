@@ -6,4 +6,7 @@
 <p>It can be used to track user activity inside a DOM element, also on EMBED elements ( read flash games ) </p>
 
 
+
+<h1>how to use</h1>
+
  
