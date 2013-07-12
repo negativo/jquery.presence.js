@@ -9,4 +9,16 @@
 
 <h1>how to use</h1>
 
- 
+<h4>
+ first off, attach the plugin to the desidered element:
+</h4>
+<pre>
+	var presence = $('body').find('embed').presence();
+</pre>
+
+<h4>
+	then we can call public methods and properties like this:
+</h4>
+<pre>
+	presence.data('presence').getLog();
+</pre>
