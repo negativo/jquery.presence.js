@@ -21,8 +21,5 @@
 </h5>
 <pre>
 	presence.data('presence').getLog();
-<<<<<<< HEAD
 </pre>
-=======
-</pre>
->>>>>>> 8bc0f6e1f2b594035aa461b2b6330e2da3b78884
+
