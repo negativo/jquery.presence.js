@@ -1,9 +1,11 @@
 (function($) {
-  $.presence = function(element, options) {
+  $.presence = function(element, options, callback) {
     var defaults = {
       time: 10,
       autostart: true,
-      stats: false
+      stats: false,
+      shootEvery: 0,
+      callback: null
     };
     var plugin = this;
     plugin.settings = {};
@@ -95,10 +97,18 @@
     plugin.getPauseSessionTime = function() {
       return lastPause;
     };
+
+    /*
+     * last paused session
+     */
     plugin.getLastMicroSessionTime = function() {
       return lastSession;
     };
-    plugin.getMicroSessionTime = function() {
+
+    /*
+     * actual microSession duration
+     */
+    plugin.getMicroSessionTime = function() { 
       return session;
     };
     plugin.getSessionTime = function() {
@@ -108,10 +118,17 @@
       return sessionLog;
     };
   };
-  $.fn.presence = function(options) {
+  $.fn.presence = function(options, callback) {
+    var dummy = null;
+    if(typeof options !== 'object' && typeof options === 'function'){
+      dummy = options;
+      options = callback;
+      callback = dummy;
+    }
+    callback();
     return this.each(function() {
       if (undefined === $(this).data('presence')) {
-        var plugin = new $.presence(this, options);
+        var plugin = new $.presence(this, options, callback);
         $(this).data('presence', plugin);
       }
     });

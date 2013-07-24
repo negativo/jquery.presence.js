@@ -18,7 +18,10 @@
       </div>
   <script src="../presence/jquery.presence.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
-  var presence2 = $('body').find('embed').presence();
+  function myCallBack(){
+     alert('its my callback');
+  }
+  var presence2 = $('body').find('embed').presence(myCallBack);
   
         setTimeout(function(){
            
