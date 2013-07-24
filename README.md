@@ -1,6 +1,6 @@
 <h1>jquery.presence.js </h1>
 
-<h2> a simple jQuery plugin used to track user activity on a element inside a page</h2>
+<h3> a simple jQuery plugin used to track user activity on a element inside a page</h3>
 
 
 <p>It can be used to track user activity inside a DOM element, also on EMBED elements ( read flash games ) </p>
@@ -21,4 +21,8 @@
 </h5>
 <pre>
 	presence.data('presence').getLog();
+<<<<<<< HEAD
 </pre>
+=======
+</pre>
+>>>>>>> 8bc0f6e1f2b594035aa461b2b6330e2da3b78884
